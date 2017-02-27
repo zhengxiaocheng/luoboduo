@@ -1,0 +1,158 @@
+//样式重置
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+}
+p{
+  margin-top:0;
+  margin-bottom:0;
+}
+ul{
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
+a:hover,
+a:visited,
+a:link,
+a:active{
+  text-decoration:none;
+};
+html {
+  font-size: 625%;
+}
+
+body {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+
+//添加此步可以使图片自适应视口大小
+img {
+  height: auto;
+  max-width: 100%;
+}
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.dib {
+  display: inline-block;
+}
+//网页公共结构样式
+@media screen and(min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 625%;
+  }
+}
+
+@media screen and(min-width: 480px) and (max-width: 960px) {
+  html {
+    font-size: 910%;
+  }
+}
+
+@media screen and(min-width: 960px) {
+  html {
+    font-size: 1250%;
+  }
+}
+//媒体查询样式
+@media screen and(max-width: 993px) {
+
+
+  .g-ft .row .m-wx_login {
+    text-align: left;
+  }
+
+}
+.g-hd {
+  .navbar-default {
+    height: .4rem;
+    background: #fff;
+    border: none;
+  }
+  .m-lf {
+    height: .4rem;
+    line-height: .4rem;
+    img {
+      vertical-align: middle;
+    }
+    .m-city {
+      height: .2rem;
+      line-height: .2rem;
+      border-left: 1px solid #e2e2e2;
+      vertical-align: middle;
+      padding-left: .06rem;
+      margin-left: .06rem;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  .navbar {
+    margin-bottom: 0;
+  }
+  .m-rts {
+    .navbar-nav > li > a {
+      line-height: .4rem;
+      padding: 0 .04rem;
+    }
+  }
+  #bs-example-navbar-collapse-1 {
+    width: 100%;
+    background: #fff;
+
+    .navbar-nav>li>a{
+      line-height:.2rem;
+    }
+    .navbar-nav>li>a:hover{
+      border-bottom:2px solid red;
+    }
+  }
+
+
+}
+//底部样式
+.g-ft {
+  padding: .2rem 0 0 0;
+  color: #b0b0b0;
+  .m-tt {
+    font-size: .08rem;
+    margin-bottom: .1rem;
+    color: #b0b0b0;
+  }
+  //联系我们
+  .m-contact_us {
+    margin-bottom: .04rem;
+    span {
+      margin-left: .04rem;
+    }
+  }
+  //微信扫码
+  .m-wx_login {
+    text-align: center;
+    img {
+      height: .6rem;
+    }
+  }
+  //版权声明
+  .m-cprt {
+    height: .2rem;
+    line-height: .2rem;
+    background: #37485a;
+    text-align: center;
+    font-size: .06rem;
+  }
+
+}
+
+
+
+

@@ -1,0 +1,138 @@
+<div class="m-job-body">
+    <div class="m-job-banner">
+        <div class="banner-top">
+            <div class="m-job-condition">
+                <div ng-repeat="jobcondition in searchType">
+                    <i id="icon-hover"></i>
+                    <div class="condition1"><span id="icon-type"></span>
+                        <p>{{jobcondition.name}}</p><span id="icon-right"></span>
+                        <div>
+                            <div class="condition2" ng-repeat="condit in jobcondition.jobTypeList">
+                                <span>{{condit.name}}</span>
+                            </div>
+                        </div>
+
+                        <div class="condition3">
+                            <div ng-repeat="condit in jobcondition.jobTypeList">
+                                <div class="conditiontype">{{condit.name}}</div>
+                                <ul ng-repeat="secondtype in condit.secondTypeList">
+                                    <li>{{secondtype.jobName}}</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--<div ><input ng-model="searchID"><a ng-click="company.less.less(searchID)">搜索公司</a></div>-->
+
+            <div class="bannerApp">
+                <div class="body-div">
+                    <div class="main-carousel" uib-carousel active="active" interval="myInterval"
+                         no-wrap="noWrapSlides">
+                        <div uib-slide data-ng-repeat="slide in slides track by slide.id" index="slide.id">
+                            <img style="z-index: -1;" class="carousel-img" data-ng-src="{{slide.image}}"
+                                 style="margin:auto;">
+                        </div>
+                        <form role="form"  class="companyForm">
+                            <div class="input-group">
+                                <span class="input-group-addon companyName hidename">公司名称</span>
+                                <input ng-model="vm.searchParams.jobName"
+                                       class="search-input form-control "
+                                       placeholder="请输入公司名称">
+                                <span class="input-group-addon companyNames ">
+                                            <button class="companyName-button"
+                                                    ui-sref="searchMain.company">搜索
+                                            </button>
+                                    </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-recommend-job" ng-controller="recommendJob">
+            <p><span ng-class="{true:'change1',false:'change2'}[className1]"
+                     ng-click="exchangeJob(className1)">推荐职位</span>
+                <span ng-class="{true:'change1',false:'change2'}[className2]"
+                      ng-click="exchangeJob(className2)">最新职位</span>
+                <span class="search-more"><a data-ng-click="recommend()">查看更多&nbsp;></a></span></p>
+            <div class="u-recommend-jobs">
+                <div class="recommend-job-item col-lg-3 col-md-6 col-xs-12 " ng-repeat="recJ in recJob">
+                    <span class="job-logo"><img src="{{recJ.logo}}"></span>
+                    <div class="job-mes">
+                        <p style="color: #fc2b47;">{{salary[recJ.compensation].name}}</p>
+                        <p>{{recJ.companyName}}</p>
+                        <p>{{recJ.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="m-recommend-job" ng-controller="recCompany">
+            <p><span>推荐公司</span>
+                <span class="search-more">查看更多&nbsp;></span></p>
+            <div class="u-recommend-jobs">
+                <div>
+                    <div class="">
+                        <img ng-src="{{recCompany.industryImg.industryImg}}">
+                    </div>
+                    <div id="vertical-banner" class="main-carousel" uib-carousel active="active" interval="myInterval"
+                         no-wrap="noWrapSlides">
+                        <div style=" width: 100%;height: 120px;overflow: hidden" uib-slide
+                             data-ng-repeat="slide in slides track by slide.id" index="slide.id">
+                            <div style="overflow: hidden" class="recommend-job-item col-lg-12 col-md-12 col-xs-12 ">
+                                <div class="com-job-mes">
+                                    <p>{{slide.bCompany.name}}</p>
+                                    <p>{{slide.bCompany.slogan}}</p>
+                                    <p><span ng-repeat="industy in slide.bCompany.industryList">{{industy}}</span></p>
+                                </div>
+                                <div class="com-job-mes">
+                                    <p>正在热招</p>
+                                    <p><span
+                                            ng-repeat="profession in slide.bCompany.professionList">{{profession}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-lbd-introduce col-lg-12 col-md-12 col-xs-12">
+        <div class="u-lbd-outbox ">
+            <div class="u-lbd-box float-left">
+                <img src="../image/zjy-1fengxian.png">
+            </div>
+            <div class="u-lbd-box float-left">
+                <p class="u-lbd-title">无成本，零风险</p>
+                <p>无任何隐含费用全程免费</p>
+                <p>人才从投递到成功入职不需要任何费用，通过测试<br/>
+                    后还可免费提供从业建议，不浪费每一分天赋。</p>
+            </div>
+        </div>
+    </div>
+    <div class="u-lbd-introduce col-lg-12 col-md-12 col-xs-12">
+        <div class="u-lbd-outbox">
+            <div class="u-lbd-box float-right">
+                <img src="../image/zjy-youxuan2.png">
+            </div>
+            <div class="u-lbd-box float-right">
+                <p class="u-lbd-title">高效匹配，高度契合</p>
+                <p>1-3天发送首个聘请通知<br/>
+                    甄选职位 深度匹配 发送聘请通知</p>
+                <p>3-5天安排候选人面试<br/>
+                    安排面试 协助客户快速入职</p>
+                <p>平均一周内推荐成功<br/>
+                    多方洽谈 售后服务</p>
+            </div>
+        </div>
+    </div>
+    <div class="u-lbd-introduce col-lg-12 col-md-12 col-xs-12">
+        <img src="../image/job-bottom-img.png">
+    </div>
+</div>

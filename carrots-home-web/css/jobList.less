@@ -1,0 +1,180 @@
+.data-type {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.search-div {
+  padding: 15px 20px;
+  label {
+  }
+  a {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 13px;
+    cursor: pointer;
+  }
+  .isChoose {
+    color: white;
+    background-color: #EB5255;
+  }
+}
+
+.search-button {
+  overflow: hidden;
+  a {
+    float: right;
+    padding: 3px 13px;
+  }
+  #search {
+    color: white;
+    background-color: #EB5255;
+  }
+}
+
+//--------职位搜索结果-----------------------------
+.u-recommend-jobs {
+  background-color: white;
+  overflow: hidden;
+  padding: 20px;
+}
+.recommend-job-item {
+  position: relative;
+  cursor: pointer;
+  margin-top: 30px;
+  border:1px solid #ddd;
+
+  .job-logo {
+    position: absolute;
+    right: 20px;
+    vertical-align: top;
+    max-width: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    img{
+      height:100px;
+    }
+  }
+}
+.recommend-job-item:hover {
+  box-shadow: 0 0 7px #DAE0E3;
+}
+.job-keyword{
+  input{
+    width:100px;
+  }
+}
+.job-left {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  .job-name {
+    overflow: hidden;
+    p {
+      float: left;
+      color: #2b3d51;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    div {
+      float: left;
+      display: inline-block;
+      margin-left: 20px;
+      color: #999;
+    }
+  }
+  .job-salary {
+    margin: 15px 0;
+    color: #fc2a48;
+    font-weight: 700;
+  }
+  .job-more {
+    color: #536a82;
+  }
+}
+
+.company-right {
+  float: left;
+  margin: 15px 0;
+  padding: 5px 20px 25px;
+  border-left:1px solid #ddd;
+  .company-name {
+    color: #2b3d51;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .company-industry {
+    margin: 15px 0;
+    span {
+      border-left: 1px solid #d9d9d9;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .company-industry {
+    span {
+      border-left: 1px solid #d9d9d9;
+    }
+  }
+  .job-logo {
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .company-right {
+    border:none;
+  }
+  .job-logo {
+    bottom: 3px;
+  }
+}
+
+
+//搜搜为空，404页面
+.div404{
+  overflow: hidden;
+  .img404,.text404{
+    height: 181px;
+    img{
+      margin: 0 auto;
+    }
+  }
+  .text-404,.bold-text-404{
+    margin-top: 50px;
+
+  }
+  .bold-text-404{
+    font-weight: 800;
+  }
+}
+@media screen and (min-width: 992px) {
+  .img404{
+    text-align: right;
+  }
+  .text-404,.bold-text-404{
+    display: flex;
+    align-items:center;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 992px) {
+.img404{
+  text-align: center;
+}
+  .text-404,.bold-text-404{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+

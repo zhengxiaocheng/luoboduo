@@ -1,0 +1,197 @@
+//样式重置
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+;
+html {
+  font-size: 625%;
+}
+
+body {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+
+//添加此步可以使图片自适应视口大小
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.dib {
+  display: inline-block;
+}
+
+//网页公共结构样式
+@media screen and(min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 625%;
+  }
+}
+
+@media screen and(min-width: 480px) and (max-width: 960px) {
+  html {
+    font-size: 910%;
+  }
+}
+
+@media screen and(min-width: 960px) {
+  html {
+    font-size: 1250%;
+  }
+}
+
+//搜索栏指令样式
+.m-selectDirective {
+  border: 1px solid #ccc;
+  padding-bottom: .06rem;
+  .input-group {
+    height: .3rem;
+    span {
+      float: left;
+      height: .3rem;
+      line-height: .3rem;
+    }
+    input {
+      display: inline-block;
+      width: 70%;
+      height: .18rem;
+      margin: .06rem 0 0 .06rem;
+    }
+  }
+  .form-group {
+    height: .3rem;
+    label {
+      float: left;
+      line-height: .3rem;
+      font-weight: normal;
+    }
+    .form-control {
+      display: inline-block;
+      padding: 0 0 0 .03rem;
+      height: .18rem;
+      width: 64%;
+      text-align: left;
+      margin-left: .04rem;
+      margin-top: .06rem;
+    }
+
+
+  }
+  .form-control {
+    display: inline-block;
+    padding: 0 0 0 .03rem;
+    height: .18rem;
+    width: 71%;
+    text-align: left;
+    margin-left: .04rem;
+    margin-top: .06rem;
+  }
+  .m-btn{
+    display:inline-block;
+    float:right;
+    margin-right:.36rem;
+  }
+}
+
+//列表公共样式，只可添加类名，不可删除类名
+.m-listBoxComm {
+  border: 1px solid #ddd;
+  margin-top: .1rem;
+  border-radius: 4px;
+  .m-listTTComm {
+    height: .22rem;
+    line-height: .22rem;
+    background: #f5f5f5;
+    font-size: .08rem;
+  }
+  button {
+    float: right;
+    margin-top: .03rem;
+    margin-right: .03rem;
+  }
+  .row {
+    text-align: center;
+    height: .26rem;
+    line-height: .26rem;
+    border-bottom: 1px solid #f5f5f5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .m-contentBox {
+
+  }
+
+  .row:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  .m-options {
+    padding: 0;
+    span {
+      display: inline-block;
+      width: 10%;
+      box-sizing: border-box;
+    }
+    .m-blueColor {
+      color: #337ab7;
+    }
+    .m-redColor {
+      color: red;
+    }
+  }
+}
+
+//分页器样式
+.u-dataPicker {
+  display: inline-block;
+  float: right;
+  margin-top: .2rem;
+  height: 1rem;
+  line-height: .1rem;
+  input {
+    display: inline-block;
+    width: .3rem;
+    height: .16rem;
+    text-align: center;
+    margin: 0 .04rem;
+  }
+  label {
+    display: inline-block;
+    height: .1rem;
+  }
+  .pagination {
+    margin: 0 .08rem;
+    vertical-align: middle;
+  }
+
+}

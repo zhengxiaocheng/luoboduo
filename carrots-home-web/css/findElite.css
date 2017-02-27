@@ -1,0 +1,129 @@
+.g-bd_Elite .m-banner {
+  width: 100%;
+  height: 2.5rem;
+  overflow: hidden;
+}
+.g-bd_Elite .m-banner img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.m-picList_2,
+.m-picList_4,
+.m-picList_6 {
+  background: #F6F7F9;
+}
+.m-picList {
+  width: 100%;
+  /* .m-picBox {
+     padding: .5rem 0;
+
+     .m-pic {
+       margin: 0 auto;
+       width: 1rem;
+
+     }
+     .m-txt {
+       margin-top: .3rem;
+       text-align: center;
+       line-height: .26rem;
+     }
+     .m-tt {
+       font-size: .12rem;
+       font-weight: bold;
+       line-height: .2rem;
+       padding: .05rem 0;
+       text-align: center;
+     }
+     .m-line {
+       height: 79px;
+       width: 1px;
+       margin: 0 auto;
+       border-left: 1px dashed #f6d2d8;
+     }
+
+   }*/
+}
+.m-picList .m-picBox {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.m-picList .m-pic {
+  float: right;
+  max-width: 2.5rem;
+}
+.m-picList .m-txt {
+  float: right;
+  max-width: 2.5rem;
+  margin-right: .4rem;
+  position: relative;
+  margin-top: .2rem;
+}
+.m-picList .m-picList .m-advantageList {
+  text-align: center;
+}
+.m-picList .m-logo {
+  height: 1rem;
+  margin: 0.3rem 0;
+}
+.m-picList .m-logo .m-logoBox {
+  width: 90%;
+  height: 1rem;
+  margin: 0 auto;
+  background: #fff;
+  line-height: 1rem;
+  text-align: center;
+}
+.m-picList .m-logo .m-logoBox img {
+  vertical-align: middle;
+  max-height: .8rem;
+}
+.m-picList .m-moreCom {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .m-picList_1 .m-picBox,
+  .m-picList_3 .m-picBox {
+    width: 5rem;
+  }
+  .m-picList_1 .m-pic,
+  .m-picList_3 .m-pic,
+  .m-picList_1 .m-txt,
+  .m-picList_3 .m-txt {
+    float: right;
+  }
+  .m-picList_1 .m-pic,
+  .m-picList_3 .m-pic {
+    width: 30%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .m-picList_1 .m-txt,
+  .m-picList_3 .m-txt {
+    width: 50%;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+  .m-picList_2 .m-picBox {
+    width: 5rem;
+  }
+  .m-picList_2 .m-pic,
+  .m-picList_2 .m-txt {
+    float: left;
+    width: 50%;
+  }
+  .m-picList_2 .m-pic {
+    width: 30%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .m-picList_2 .m-txt {
+    width: 50%;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+}

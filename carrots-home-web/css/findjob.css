@@ -1,0 +1,320 @@
+#icon-type {
+  height: 0;
+  padding: 1px 14px;
+  background: url("../image/zzz-chanpin.png") no-repeat;
+}
+#icon-right {
+  margin: 0 20px;
+  height: 0;
+  padding: 0 14px;
+  background: url("../image/findjobdayu2.png") no-repeat;
+}
+.condition1:hover {
+  color: rgba(244, 56, 81, 0.9);
+  background-color: white;
+}
+.condition1:hover #icon-type {
+  height: 0;
+  padding: 1px 14px;
+  background: url("../image/zzz-chanpin-hov.png") no-repeat;
+}
+.condition1:hover #icon-right {
+  margin: 0 20px;
+  height: 0;
+  padding: 0 14px;
+  background: url("../image/findjobdayu.png") no-repeat;
+}
+.condition1:hover .condition3 {
+  display: block;
+}
+.m-job-condition {
+  float: left;
+  margin: 0;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(244, 56, 81, 0.9);
+  border-bottom: 1px solid rgba(244, 56, 81, 0.9);
+  border-left: 1px solid rgba(244, 56, 81, 0.9);
+  color: white;
+  background-color: rgba(244, 56, 81, 0.9);
+}
+.m-job-condition .condition1 {
+  padding: 50px 0 0 50px;
+  height: 174px;
+}
+.m-job-condition .condition1 p {
+  display: inline-block;
+  width: 80px;
+  font-size: 20px;
+}
+.m-job-condition .condition1 .condition2 {
+  display: inline-block;
+  padding: 5px 15px 5px 0;
+  cursor: pointer;
+}
+.m-job-condition .condition {
+  display: none;
+}
+.m-job-condition .condition3 {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  padding: 30px 80px;
+  width: 750px;
+  top: 0;
+  color: black;
+  border-top: 1px solid rgba(244, 56, 81, 0.9);
+  border-bottom: 1px solid rgba(244, 56, 81, 0.9);
+  border-right: 1px solid rgba(244, 56, 81, 0.9);
+  background-color: white;
+}
+.m-job-condition .condition3 .conditiontype {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+  font-size: 20px;
+  color: rgba(244, 56, 81, 0.9);
+}
+.m-job-condition .condition3 ul {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.m-job-condition .condition3 ul li {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100px;
+  border-right: 1px solid #E9E9E9;
+  text-align: center;
+  color: #536a82;
+  cursor: pointer;
+}
+.m-job-condition .condition3 ul li :last-child {
+  border: none;
+}
+/*先写默认样式，最大屏幕*/
+.m-job-body {
+  padding: 0 20px;
+  background-color: #f6f7f8 !important;
+}
+.banner-top {
+  overflow: hidden;
+}
+.m-job-banner {
+  font-weight: 400;
+  position: relative;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1330px) {
+  .m-job-banner {
+    width: 1300px;
+  }
+  .banner-top .bannerApp {
+    position: absolute;
+    left: 250px;
+  }
+  .banner-top .bannerApp .main-carousel img {
+    width: 1040px;
+    height: 522px;
+  }
+  .m-job-condition {
+    width: 250px;
+  }
+  .condition3 {
+    left: 250px;
+    height: 522px;
+  }
+}
+@media screen and (max-width: 1330px) {
+  .m-job-banner {
+    width: 1000px;
+  }
+  .bannerApp {
+    position: absolute;
+    left: 220px;
+  }
+  .bannerApp .main-carousel img {
+    width: 800px;
+    height: 522px;
+  }
+  .m-job-condition {
+    width: 220px;
+  }
+  .condition3 {
+    left: 220px;
+    height: 522px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .banner-top {
+    text-align: center;
+    height: 2rem;
+  }
+  .m-job-condition {
+    display: none;
+  }
+  .m-job-banner {
+    position: relative;
+    width: 100%;
+  }
+  .bannerApp {
+    position: absolute;
+    left: 0;
+  }
+  .bannerApp .main-carousel {
+    text-align: center;
+  }
+  .bannerApp .main-carousel img {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  #vertical-banner .carousel-inner > .item.next,
+  #vertical-banner .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  #vertical-banner .carousel-inner > .item.prev,
+  #vertical-banner .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+#vertical-banner {
+  position: relative;
+}
+#vertical-banner .carousel-control.right,
+#vertical-banner .carousel-control.left {
+  display: none;
+}
+#vertical-banner .carousel-inner {
+  display: block;
+}
+#vertical-banner .carousel-indicators {
+  display: block;
+  width: 0;
+  left: 100%;
+  right: 0;
+  bottom: 10px;
+  margin-left: 0;
+  list-style: none;
+}
+#vertical-banner .carousel-indicators .active {
+  background-color: #FC2949;
+}
+#vertical-banner .carousel-indicators li {
+  margin: 8px 0 ;
+  border: 1px solid #EAEAEA ;
+  width: 14px ;
+  height: 14px ;
+}
+.m-recommend-job {
+  position: relative;
+  margin-top: 30px;
+}
+.m-recommend-job .change1 {
+  font-weight: bold;
+  color: black;
+}
+.m-recommend-job span {
+  cursor: pointer;
+  padding-left: 10px;
+  color: #536a82;
+}
+.m-recommend-job .search-more {
+  position: absolute;
+  right: 10px;
+}
+.u-recommend-jobs {
+  background-color: white;
+  overflow: hidden;
+  padding: 20px;
+}
+.recommend-job-item:hover {
+  box-shadow: 0 0 7px #DAE0E3;
+}
+.recommend-job-item {
+  height: 110px;
+  padding: 10px 10px 10px 0;
+  border: solid 1px #f5f5f5;
+  cursor: pointer;
+}
+.recommend-job-item .job-logo img {
+  vertical-align: top;
+  max-width: 90px;
+}
+.recommend-job-item .job-mes {
+  display: inline-block;
+  padding: 10px 0 10px 10px;
+  height: 100px;
+}
+.recommend-job-item .job-mes p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.u-lbd-introduce {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.u-lbd-introduce .u-lbd-box {
+  display: inline;
+  margin: 100px 30px;
+  height: 178px;
+  width: 240px;
+}
+.u-lbd-introduce .u-lbd-box img {
+  margin: 0 auto;
+}
+.u-lbd-introduce .u-lbd-box .u-lbd-title {
+  margin-top: 30px ;
+  font-size: 24px;
+  font-weight: bold;
+}
+.u-lbd-introduce .u-lbd-box p {
+  margin: 0 auto;
+  color: #536a82;
+}
+@media screen and (min-width: 768px) {
+  .u-lbd-introduce .float-left {
+    float: left;
+  }
+  .u-lbd-introduce .float-right {
+    float: right;
+  }
+  .u-lbd-introduce p {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .u-lbd-introduce .float-right,
+  .u-lbd-introduce .float-left {
+    float: none;
+  }
+  .u-lbd-introduce p {
+    text-align: center;
+  }
+}
+.body-div form {
+  width: 66%;
+  position: absolute;
+  z-index: 1000;
+  top: 120px;
+  right: 17%;
+  border-radius: 10px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.body-div form input {
+  height: 34px;
+}
+.body-div form .companyNames {
+  border: none;
+  background-color: #EB5255;
+}
+.body-div form .companyNames button {
+  font-size: 16px;
+}
+.body-div form .companyName {
+  font-size: 16px;
+  color: #536a82;
+}

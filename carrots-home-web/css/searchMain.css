@@ -1,0 +1,31 @@
+.searchTab {
+  margin: 15px;
+  padding: 15px;
+}
+.searchMain {
+  border-bottom: 2px solid #EB5255;
+}
+.searchMain span {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.searchMain a {
+  display: inline-block;
+  padding: 5px 20px ;
+  font-size: 24px;
+  text-decoration: none;
+}
+.searchMain .back-color {
+  background-color: #EB5255;
+}
+.searchMain .back-color a {
+  color: white;
+}
+.searchMain .font-color {
+  background-color: white;
+}
+.searchMain .font-color a {
+  color: #000;
+}

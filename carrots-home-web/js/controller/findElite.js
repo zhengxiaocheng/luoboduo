@@ -1,0 +1,19 @@
+/**
+ * Created by 10769 on 2017/2/15.
+ */
+angular.module('myApp').controller("EliteCtrl",['$scope','artService','$state',function($scope,artService,$state){
+    //获取精英页banner图
+    artService.getEliteList().then(function(res){
+       $scope.bannerImg=res.data.data.articleList[0].img;
+    },function(res){
+      alert("获取精英页banner图失败");
+    });
+    //获取公司logo
+    artService.getCompany().then(function(res){
+       $scope.logoList=$scope.logoList=res.data.data;
+    });
+    //跳转到更多公司页面
+    $scope.moreComList=function(){
+        $state.go("moreCooperationCom");
+    }
+}]);

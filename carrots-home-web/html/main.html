@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--使页面宽度自适应屏幕宽度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body data-ng-controller="mainCtrl">
+<header class="g-hd">
+    <div class="container">
+        <div class="row" style=" position:relative;">
+            <nav class="navbar navbar-default">
+                <div class="col-xs-7 m-lf">
+                    <img src="../image/logo.png" alt="logo">
+                    <div class="dib m-city">
+                        <img src="../image/nav.png">
+                        <span>北京站</span>
+                    </div>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right  text-center">
+                        <li  ui-sref="home"><a href="">首页</a></li>
+                        <li ui-sref="findJob"><a href="">找职业</a></li>
+                        <li  ui-sref="findElite"><a href="">找精英</a></li>
+                        <li ui-sref="aboutUs"><a href="">关于我们</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+<div data-ui-view=""></div>
+
+<footer class="g-ft">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <a href="#"><p class="m-tt">关于我们</p></a>
+                <p>萝卜多——知根知底的社群招聘</p>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <a href="#"><p class="m-tt">联系我们</p></a>
+                <p class="m-contact_us"><img src="../image/erweima.jpg" alt="tel"><span>联系电话:  (010)59478634</span></p>
+                <p class="m-contact_us"><img src="../image/i-email.jpg" alt="e-mail"><span>邮箱支持:  kefu@ptteng.com</span>
+                </p>
+                <p class="m-contact_us"><img src="../image/i-address.png" alt="address"><span>地 址</span><span>北京市海淀区翠微路甲10#225室</span>
+                </p>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <div class="m-wx_login">
+                    <img src="../image/erweima%20(1).jpg" alt="二维码">
+                    <p>微信号：葡萄藤IT技术孵化</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="m-cprt">Copyright © 2015 北京葡萄藤信息技术有限公司 All Rights Reserved | 京ICP备15035574号-3</div>
+
+</footer>
+
+
+<script src="//cdn.bootcss.com/angular.js/1.5.0/angular.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.0/angular-animate.min.js"></script>
+<script src="//cdn.bootcss.com/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+<script src="//cdn.bootcss.com/angular.js/1.5.0/angular-sanitize.min.js"></script>
+<script src="//cdn.bootcss.com/oclazyload/1.0.9/ocLazyLoad.min.js"></script>
+<script src="../js/framework/angular-ui-router.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/router/router.js"></script>
+<script src="../js/services/services.js"></script>
+<script src="../js/controller/mainCtrl.js"></script>
+<script src="../js/constant/constant.js"></script>
+<script src="../js/filter/filter.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

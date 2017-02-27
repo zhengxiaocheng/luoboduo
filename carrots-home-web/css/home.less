@@ -1,0 +1,218 @@
+//媒体查询样式
+@media screen and(max-width: 993px) {
+
+  //去掉border的样式
+  .g-bd .m-advantage .row .m-data {
+    border: none;
+  }
+
+  .g-bd .m-service .row .m-pic_box {
+    border: none;
+  }
+
+  .m-airplane {
+    display: none;
+  }
+
+}
+
+//主体部分
+.g-bd {
+  width: 100%;
+  .m-pic {
+    width: 100%;
+    height: 2.5rem;
+
+  }
+  .m-advantage {
+    padding: .2rem 0;
+    //右部数字描述区域
+    .m-data {
+      border-left: 1px solid #e5e9eb;
+    }
+    .m-num {
+      font-size: .08rem;
+      color: #fc2b47;
+      font-weight: bold;
+      text-align: center;
+    }
+    .m-detail {
+      margin-bottom: .08rem;
+      font-size: .1rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+  }
+  //左边简介区域
+  .m-adv_item {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: .19rem;
+    .m-tt {
+      padding: .1rem 0 .05rem 0;
+      font-size: .08rem;
+      font-weight: bold;
+    }
+    .m-ct {
+      padding: .05rem 0 0 0;
+      font-size: .08rem;
+    }
+  }
+  .m_newJob {
+    width: 100%;
+    padding: .4rem 0;
+    background: #f7f7f7;
+    .m_tt {
+      font-size: .1rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+    .m_ttE {
+      font-size: .08rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+    .m_more {
+      padding-top: .2rem;
+      font-size: .1rem;
+      text-align: right;
+      margin-bottom: .2rem;
+    }
+    //轮播图样式开始
+    .m-picBox {
+      height: 1.8rem;
+      width: 100%;
+    }
+    .m-pic_single:hover{
+      box-shadow: 0 4px 7px #e7e7e7;
+      cursor: pointer;
+    }
+    .m-pic_single {
+      height: 100%;
+      width: 22%;
+      margin: 0 .085rem;
+      background: #fff;
+      .u-logo{
+        height:1rem;
+        line-height:1rem;
+        padding-bottom:.02rem;
+        border-bottom:1px solid rgb(238, 238, 238);
+        img{
+          vertical-align:middle;
+          max-height:100%;
+        }
+      }
+
+      .u-jobName,
+      .u-companyName {
+        text-align: center;
+        line-height: .22rem;
+      }
+      .u-jobName {
+        margin-top: .02rem;
+      }
+
+    }
+    .carousel-control.left, .carousel-control.right {
+      background-image: none !important;
+    }
+    .carousel-control.left {
+      left: -10%;
+    }
+    .carousel-control.right {
+      right: -10%;
+    }
+    .carousel-indicators {
+      display: none;
+    }
+    .carousel-control {
+      width: 10%;
+    }
+
+  }
+
+
+
+
+
+  //服务流程
+  .m-service {
+    padding: .4rem 0 0.2rem 0;
+    .m_tt {
+      font-size: .1rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+    .m_ttE {
+      margin-bottom: .1rem;
+      font-size: .08rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+    .m-pic_box {
+      border: 1px solid #e9edef;
+      border-radius: .05rem;
+      margin-bottom: .1rem;
+      //此处padding:0修改了栅格col的padding值
+      padding: 0;
+      text-align: center;
+      img {
+        display: inline-block;
+      }
+      .m-service_txt {
+        font-size: .08rem;
+        height: .2rem;
+        line-height: .16rem;
+      }
+    }
+
+
+    .m-airplane {
+      margin-top: .4rem;
+      position: relative;
+      height: 1px;
+      border-bottom: 2px dashed #ffd8d9;
+      box-sizing: border-box;
+      img {
+        position: absolute;
+        left: 50%;
+        top: -12px;
+        transform: translate(-50%, 0);
+      }
+
+    }
+
+  }
+  //伙伴之言
+  .m-partner_word {
+    width: 100%;
+    padding: .4rem 0;
+    background: #f7f7f7;
+    .m_tt {
+      font-size: .1rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+    .m_ttE {
+      margin-bottom: .1rem;
+      font-size: .08rem;
+      color: #2d3e50;
+      text-align: center;
+    }
+    //轮播图
+    .m-pic_roll {
+      border: 1px solid red;
+      height: 100px;
+
+    }
+  }
+
+}
+
+
+
+
+
+
+
+

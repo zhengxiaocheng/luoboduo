@@ -1,0 +1,18 @@
+<div class="searchTab col-lg-12 col-md-12 col-xs-12" >
+    <div>
+        <div class="searchMain" ng-controller="searchMain">
+    <span ng-class="{true:'back-color',false:'font-color'}[searchMain]">
+        <a ng-click="changeSearch(true)"  ui-sref=".company" >
+        公司
+    </a></span><span ng-class="{false:'back-color',true:'font-color'}[searchMain]">
+        <a ng-click="changeSearch(false)"  ui-sref=".job" href="/searchMain/searchJob" >
+            职位
+        </a>
+    </span>
+        </div>
+    </div>
+
+    <div data-ui-view="">
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+.item-div .job-left .job-name {
+  padding: 20px;
+}
+.item-div .job-left .job-name .company-name {
+  margin: 20px 0;
+}
+.item-div .job-left .job-name .job-mes .job-salary {
+  color: #FC2A48;
+}
+.item-div .job-left .job-description {
+  margin: 20px;
+}
+.item-div .job-left .job-description h4 {
+  display: block;
+  margin: 20px 0;
+  padding-left: 5px;
+  border-left: 3px solid #fc2a48;
+}
+.item-div .job-left .job-description .mes-content {
+  margin: 20px;
+  white-space: pre-line;
+}
+.item-div .job-left .sharing {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+.item-div .job-left .sharing button {
+  position: absolute;
+  right: 10px;
+  background-color: #fc2b47;
+  color: white;
+  width: 18%;
+  min-width: 90px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  z-index: 10;
+  outline: none;
+}
+.item-div .job-left .sharing img {
+  height: 35px;
+}
+.item-div .job-left .sharing #sharing {
+  height: 20px;
+}
+.company-right .job-logo {
+  border: 1px solid #DDD;
+  height: 150px;
+  width: 150px;
+}
+.company-right .job-logo img {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  max-height: 100%;
+}

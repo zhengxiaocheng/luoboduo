@@ -1,0 +1,65 @@
+.g-hdMain {
+  height: .4rem;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6c7a95));
+}
+.g-hdMain .navbar-default {
+  background: none;
+  border: none;
+  height: .4rem;
+}
+.g-hdMain .navbar-brand {
+  height: .4rem;
+  line-height: .4rem;
+  padding: 0;
+  color: #fff;
+  font-size: .16rem;
+  font-weight: bold;
+}
+.g-hdMain .navbar-brand:hover {
+  color: #fff;
+}
+.g-hdMain .navbar-default .navbar-nav > .active > a {
+  color: #fff;
+  background: none;
+}
+.g-hdMain .navbar-nav > li > a {
+  height: .4rem;
+  line-height: .4rem;
+  padding: 0 .16rem;
+}
+.g-hdMain .dropdown {
+  line-height: .4rem;
+}
+.g-bdMain {
+  margin-top: .15rem;
+  /*.ng-scope{
+
+  }*/
+}
+.g-bdMain .m-welcome {
+  height: .24rem;
+  line-height: .24rem;
+  background: #efeff0;
+  border-radius: 4px;
+}
+.g-bdMain .m-welcome:hover {
+  cursor: pointer;
+}
+.g-bdMain .panel-group {
+  margin-bottom: 0;
+}
+.g-bdMain .panel-default:hover {
+  cursor: pointer;
+}
+.g-bdMain .panel-title {
+  height: .15rem;
+  line-height: .15rem;
+}
+.g-bdMain .panel-body {
+  height: auto;
+  padding: 0;
+}
+.g-bdMain .panel-body p {
+  height: .3rem;
+  line-height: .3rem;
+}

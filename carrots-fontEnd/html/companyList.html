@@ -1,0 +1,144 @@
+<div ng-controller="companyListCtrl">
+    <div class="m-selectDirective">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="input-group input-group-lg">
+                        <span>公司名称</span><input type="text" class="form-control" ng-model="companyName">
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="input-group input-group-lg">
+                        <span>产品名称</span><input type="text" class="form-control" ng-model="productName" >
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <span>公司行业</span>
+                    <!--ng-option中industry.id as，双向绑定输出的就是对象的id-->
+                    <select ng-model="selectedOne" ng-options="industry.id as industry.name for industry in Industry"
+                            >
+                        <option value="">不限</option>
+                    </select>
+                </div>
+                <div class="col-xs-3">
+                    <span>冻结状态</span>
+                    <!--ng-option中industry.id as，双向绑定输出的就是对象的id-->
+                    <select ng-model="selectedTwo" ng-options="freezed.id as freezed .name for freezed in Freezed">
+                        <option value="">不限</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3">
+                    <span>融资规模</span>
+                    <!--ng-option中industry.id as，双向绑定输出的就是对象的id-->
+                    <select ng-model="selectedThree"
+                            ng-options="financing.id as financing.name for financing in Financing"
+                          >
+                        <option value="">不限</option>
+                    </select>
+                </div>
+                <div class="col-xs-3">
+                    <span>认证状态</span>
+                    <!--ng-option中industry.id as，双向绑定输出的就是对象的id-->
+                    <select ng-model="selectedFour" ng-options="approved.id as approved.name for approved in Approved"
+                           >
+                        <option value="">不限</option>
+                    </select>
+                </div>
+                <div class="col-xs-2">
+                    <span>地区</span>
+                    <select class="form-control" ng-model="selectedPro"
+                            ng-options="province.ProID as province.ProName for province in myArr"
+                            ng-change="select()" class="threeSelect">
+                        <option value="">请选择省份</option>
+                    </select>
+                    <!--ng-module就是当前选中的这个值，会根据用户的选择进行变化-->
+
+                </div>
+                <div class="col-xs-2">
+                    <select class="form-control" ng-model="selectedCity"
+                            ng-options="bb.CityID as bb.CityName for bb in CityArr"
+                            ng-change="selectTwo()">
+                        <option value="">请选择市名</option>
+
+                    </select>
+
+                </div>
+                <div class="col-xs-2">
+                    <select class="form-control" ng-model="selectedCounty"
+                            ng-options="cc.Id as cc.countyName for cc in CountyArr" ng-change="selectThree()">
+                        <option value="">请选择区县</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-success" ng-click="clearCom()">清空</button>
+                <button type="button" class="btn btn-danger" ng-click="searchCom()">搜索</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="m-listBoxComm">
+        <div class="m-listTTComm">
+            <div class="container-fluid">
+                <span> 公司列表</span>
+                <button type="button" class="btn btn-danger"><span class="glyphicon-asterisk
+glyphicon glyphicon-plus" style="font-size:.06rem;"></span>新增
+                </button>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-1">序号</div>
+                <div class="col-xs-2">公司名称</div>
+                <div class="col-xs-1">公司行业</div>
+                <div class="col-xs-2">地区</div>
+                <div class="col-xs-1">融资规模</div>
+                <div class="col-xs-1">认证状态</div>
+                <div class="col-xs-1">冻结状态</div>
+                <div class="col-xs-3">操作</div>
+            </div>
+            <div class="row" ng-repeat="item in companyList">
+                <div class="col-xs-1">{{($index+1)}}</div>
+                <div class="col-xs-2" class="m-contentBox">{{item.name}}</div>
+                <div class="col-xs-1">{{(item.industryList[0]) | myFilter:"industry"}}</div>
+                <div class="col-xs-2">{{item.city |cityFilter}}-{{item.county|countyFilter}}</div>
+                <div class="col-xs-1">{{item.financing| myFilter:"financing"}}</div>
+                <div class="col-xs-1">{{item.approved|myFilter:"approved"}}</div>
+                <div class="col-xs-1">{{item.freezed|myFilter:"freezed"}}</div>
+                <div class="col-xs-3 m-options">
+                    <span class="m-blueColor">职位</span>
+                    <span class="m-blueColor">解除</span>
+                    <span class="m-blueColor">编辑</span>
+                    <span class="m-redColor">冻结</span>
+                    <span class="m-redColor">删除</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="u-dataPicker">
+        <label>每页显示<input type="text" value="perPage" ng-model="perPage" ng-blur="pageChangedTxt()"></label>
+        <ul uib-pagination total-items="totalItems" ng-change="pageChanged()" boundary-links="true"
+            ng-model="currentPage"
+            previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;">
+        </ul>
+        <label>去到第<input type="text" value="pageNum" ng-model="pageNum" ng-blur="goPage()">页
+            <button>确定</button>
+        </label>
+    </div>
+
+
+</div>

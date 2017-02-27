@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="g-bd_moreCooperationCom" ng-controller="moreCooperationCom">
+    <div class="container">
+        <div class="m-banner">
+            <img src="{{banner}}" alt="">
+        </div>
+    </div>
+
+    <div class="container form-group">
+        <div class="m-form" ng-repeat=" options in options">
+            <label>{{options.CNname}}</label>
+            <a ng-repeat="option in options.value" href=""
+               ng-class="{true:'select',false:'noSelect'}[option.choose]"
+               ng-click="MultiSelect($index,options.value);selectUser()">{{option.name}}</a>
+        </div>
+    </div>
+
+
+    <!--公司信息列表-->
+    <div class="container companyList" ng-if="company">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in company">
+                <div class=" m-companyBox">
+                    <div class="m-top">
+                        <div class="m-logo">
+                            <img src="{{item.logo}}" alt="">
+                        </div>
+                        <div class="m-txt">
+                            <h3 class="m-companyName">{{item.name}}</h3>
+                            <p class="m-slogan">{{item.slogan}}</p>
+                            <p class="m-num">{{item.professionNum}} <span>个职位在招</span></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>
+                            <img src="../image/phone-url.png" alt="">
+                            <span ng-repeat="aa in item.industryList">
+                                {{options[1].value[(aa+1)].name}}/
+                            </span>
+                        </span>
+                        <span>
+                            <img src="../image/shangshi.png" alt="">
+
+                                {{ options[2].value[item.financing].name}}
+
+                        </span>
+                        <span>
+                            <img src="../image/location-company.png" alt="">
+                            <span>{{options[0].value[item.province].name}}</span>
+                        </span>
+                    </div>
+                </div>
+
+               <!-- options[1].value[bb].name-->
+
+            </div>
+        </div>
+        <div class="pageDiveder">
+            <ul uib-pagination total-items="totalItems" ng-model="vm.currentPage" items-per-page="9"
+                ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;"
+                last-text="&raquo;"></ul>
+            <p>去第<input type="text" class="text" ng-model="vm.pageNum">页<input type="button" value="确定"
+                                                                               ng-click="goPage()"></p>
+
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

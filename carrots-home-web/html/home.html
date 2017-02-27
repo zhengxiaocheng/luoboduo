@@ -1,0 +1,144 @@
+<div class="g-bd" ng-controller="mainCtrl">
+    <!--首页大图-->
+    <div class="m-pic">
+        <img alt="行业大图" class="dib" src="{{banner}}" style="width:100%;height:100%;margin:0">
+    </div>
+    <!--超短相应时间等模块-->
+    <div class="container m-advantage">
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <div class="m-adv_item">
+                    <img src="../image/jianjie-1.png" alt="响应时间">
+                    <p class="m-tt">超短响应时间</p>
+                    <p class="m-ct">48小时高效推荐</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="m-adv_item">
+                    <img src="../image/jianjie-1.png" alt="响应时间">
+                    <p class="m-tt">行业1/3的价格</p>
+                    <p class="m-ct">成功推荐仅收费1月工资</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 ">
+                <div class="m-adv_item">
+                    <img src="../image/jianjie-1.png" alt="响应时间">
+                    <p class="m-tt">三维的人才评测</p>
+                    <p class="m-ct">技术人事背景三维评定</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 m-data">
+                <div class="m-data-box">
+                    <p class="m-num">5家</p>
+                    <p class="m-detail">信赖公司</p>
+                </div>
+                <div class="m-data-box">
+                    <p class="m-num">1500+</p>
+                    <p class="m-detail">人才库</p>
+                </div>
+                <div class="m-data-box">
+                    <p class="m-num">200+</p>
+                    <p class="m-detail">人才入职</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--最新职位-->
+
+    <div class="m_newJob">
+        <div class="container">
+            <p class="m_tt">最新职位</p>
+            <p class="m_ttE">NEW POSITION</p>
+            <p class="m_more">更多 ></p>
+
+
+            <div class="container m-bigPic">
+
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides" index="$index" class="m-picBox">
+                        <div ng-repeat="aa in slide" style="float:left;height:100%" class="m-pic_single">
+                            <div class="u-logo" href="">
+                                    <img ng-src="{{aa.logo}}">
+                            </div>
+                            <p class="u-jobName">{{aa.name}}</p>
+                            <p class="u-companyName">{{aa.companyName}}</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--服务流程-->
+            <div class="container m-service">
+                <p class="m_tt">服务流程</p>
+                <p class="m_ttE"> SERVICE FLOW</p>
+                <div class="row">
+                    <div class="col-md-2 col-sm-12 m-pic_box col-md-offset-1">
+                        <img src="../image/flow-path1.png" alt="握手图">
+                        <p class="m-service_txt">1.意向洽谈，深入评审</p>
+                    </div>
+
+                    <div class="col-md-2 col-sm-12">
+                        <div class="m-airplane">
+                            <img src="../image/arrow.png" alt="箭头">
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12 m-pic_box">
+                        <img src="../image/flow-path2.png" alt="握手图">
+                        <p class="m-service_txt">2.确认合作，签订合同</p>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <div class="m-airplane">
+                            <img src="../image/arrow.png" alt="箭头">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-12 m-pic_box">
+                        <img src="../image/flow-path3.png" alt="握手图">
+                        <p class="m-service_txt"> 3.提出需求，提供jd</p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-12 m-pic_box col-md-offset-1">
+                        <img src="../image/flow-path4.png" alt="握手图">
+                        <p class="m-service_txt">4.开始招聘，人才精选</p>
+                    </div>
+
+                    <div class="col-md-2 col-sm-12">
+                        <div class="m-airplane">
+                            <img src="../image/arrow.png" alt="箭头">
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12 m-pic_box">
+                        <img src="../image/flow-path5.png" alt="握手图">
+                        <p class="m-service_txt">5.人才评测，简历脱水</p>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <div class="m-airplane">
+                            <img src="../image/arrow.png" alt="箭头">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-12 m-pic_box">
+                        <img src="../image/flow-path6.png" alt="握手图">
+                        <p class="m-service_txt"> 6.上岗，转入售后</p>
+                    </div>
+
+                </div>
+            </div>
+            <!--伙伴之言-->
+            <div class="m-partner_word">
+                <p class="m_tt">伙伴之言</p>
+                <p class="m_ttE"> PARTNER ADVICE</p>
+                <div class="container m-pic_roll">
+                    伙伴之言四分之一轮播占位
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

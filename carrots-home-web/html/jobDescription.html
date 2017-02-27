@@ -1,0 +1,49 @@
+<div ng-controller="jobDescription">
+    <div class="recommend-job-item item-div col-lg-12 col-md-12 col-xs-12 ">
+        <div class="job-left">
+            <div class="job-name col-lg-8 col-md-8 col-xs-12">
+                <h4><strong>{{mes.name}}</strong></h4>
+                <div class="company-name">{{mes.companyName}}</div>
+                <div class="job-mes">
+                    <span class="job-salary">{{mes.compensation |salaryFilter:mes.compensation}}</span>
+                    <span class="job-province"><img src="../image/location-jobdescripe.png">北京</span>
+                    <span class="job-edution"><img src="../image/description-2.png">{{mes.education |educationFilter:mes.education}}</span>
+                    <span class="job-salary"><img src="../image/description-1.png">{{mes.experience |experienceFilter:mes.experience}}</span>
+                </div>
+                <div><span ng-repeat="tage in mes.tags track by $index">{{tage}}</span></div>
+                <div><img src="../image/date.png" alt="">{{mes.updateAt |date:"yyyy-MM-dd "}}</div>
+            </div>
+            <div class="job-description">
+                <h4>职位描述</h4>
+                <p>岗位职责：</p>
+
+                <p>工作职责：</p>
+                <div class="mes-content">{{mes.requisite}}</div>
+                <p>必要条件：</p>
+                <div class="mes-content">{{mes.responsibility}}</div>
+                <p>公司福利：</p>
+                <div class="mes-content">{{mes.boon}}</div>
+            </div>
+            <div class="sharing">
+                <img id="sharing" src="../image/sharing.png" alt="">
+                <span>分享</span>
+                <img src="../image/sharing-sprite.png" alt="">
+                <button>我感兴趣</button>
+            </div>
+        </div>
+        <div class="company-right col-lg-4 col-md-4 col-xs-12">
+            <div class="job-logo"><img src="{{mes.logo}}"></div>
+            <div class="company-name">{{mes.companyName}}<img src="../image/company-home-1.png" alt=""></div>
+            <div>
+                <span>基本信息</span>
+            </div>
+            <div><img src="../image/people.png" alt="">
+                <span>100人</span>
+            </div>
+            <div class="company-industry"><img src="../image/company-home-3.png" alt=""><span
+                    ng-repeat="industry in mes.industryList">{{industry.industry}}</span>
+            </div>
+        </div>
+
+    </div>
+</div>

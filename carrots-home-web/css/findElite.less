@@ -1,0 +1,145 @@
+
+.g-bd_Elite {
+  //banner样式
+  .m-banner {
+    width: 100%;
+    height: 2.5rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+//添加背景颜色
+.m-picList_2, .m-picList_4, .m-picList_6 {
+  background: #F6F7F9;
+}
+
+.m-picList {
+  width: 100%;
+
+  .m-picBox {
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .m-pic {
+    float: right;
+    max-width: 2.5rem;
+  }
+  .m-txt {
+    float: right;
+    max-width: 2.5rem;
+    margin-right: .4rem;
+    position: relative;
+    margin-top: .2rem;
+  }
+
+  /* .m-picBox {
+     padding: .5rem 0;
+
+     .m-pic {
+       margin: 0 auto;
+       width: 1rem;
+
+     }
+     .m-txt {
+       margin-top: .3rem;
+       text-align: center;
+       line-height: .26rem;
+     }
+     .m-tt {
+       font-size: .12rem;
+       font-weight: bold;
+       line-height: .2rem;
+       padding: .05rem 0;
+       text-align: center;
+     }
+     .m-line {
+       height: 79px;
+       width: 1px;
+       margin: 0 auto;
+       border-left: 1px dashed #f6d2d8;
+     }
+
+   }*/
+  //我们的优势
+  .m-picList {
+    .m-advantageList {
+      text-align: center;
+    }
+  }
+
+  //成功案例
+  .m-logo {
+    height: 1rem;
+    margin: 0.3rem 0;
+    .m-logoBox {
+      width: 90%;
+      height: 1rem;
+      margin: 0 auto;
+      background: #fff;
+      line-height: 1rem;
+      text-align: center;
+      img {
+        vertical-align: middle;
+        max-height: .8rem;
+      }
+    }
+  }
+  .m-moreCom {
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .m-picList_1, .m-picList_3 {
+    .m-picBox {
+      width: 5rem;
+    }
+    .m-pic, .m-txt {
+      float: right;
+    }
+    .m-pic {
+      width: 30%;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .m-txt {
+      width: 50%;
+      margin-right: .5rem;
+      vertical-align: middle;
+    }
+
+  }
+
+  .m-picList_2 {
+    .m-picBox {
+      width: 5rem;
+    }
+    .m-pic, .m-txt {
+      float: left;
+      width: 50%;
+    }
+    .m-pic {
+      width: 30%;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .m-txt {
+      width: 50%;
+      margin-right: .5rem;
+      vertical-align: middle;
+    }
+
+  }
+
+}
+

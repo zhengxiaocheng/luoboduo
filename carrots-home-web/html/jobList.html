@@ -1,0 +1,90 @@
+<div>
+    <label class="data-type">
+        {{{true:'推荐职位',false:'最新职位'}[url]}}
+    </label>
+    <form class="search-div">
+        <div class="form-group">
+            <label class="job-keyword">关键字:
+                <input type="text" class="form-control" style="width:300px;display: inline-block;"
+                       placeholder="输入职业关键词，如产品经理等" ng-model="jobKeyword"></label>
+        </div>
+        <div class="form-group" ng-repeat=" options in options">
+            <label>{{options.CNname}}</label>
+            <a ng-repeat="option in options.value track by $index "
+               ng-class="{true:'isChoose'}[option.choose]"
+               ng-click="options.name=='updateAt'?bradioType($index,options.value):MultiSelect($index,options.value)"
+            >{{option.name}}</a>
+        </div>
+        <div class="search-button">
+            <a id="search" data-ng-click="search()">搜索</a>
+            <a data-ng-click="clearJob()">清空</a>
+        </div>
+    </form>
+    <div class="u-recommend-jobs" ng-if="newjobs">
+        <div class="recommend-job-item col-lg-12 col-md-12 col-xs-12 " ng-repeat="newjob in newjobs"  ui-sref="jobDescription({id: newjob.id})">
+            <div class="job-left">
+                <div class="job-name">
+                    <p>{{newjob.name}}</p>
+                    <div> {{newjob.updateAt |date:"yyyy-MM-dd hh:mm"}}</div>
+                </div>
+                <div class="job-salary">{{newjob.compensation |salaryFilter:newjob.compensation}}</div>
+                <div class="job-more">{{newjob.province }}/{{newjob.education
+                    |salaryFilter:newjob.education}}/{{newjob.experience |experienceFilter:newjob.education}}
+                </div>
+            </div>
+            <div class="company-right">
+                <div class="company-name">{{newjob.companyName}}</div>
+                <div class="company-industry"><span
+                        ng-repeat="industry in newjob.industryList">{{industry.industry}}</span>
+                </div>
+            </div>
+            <div class="job-logo"><img src="{{newjob.logo}}"></div>
+        </div>
+        <ul uib-pagination total-items="totalItems"
+            ng-model="currentPage" ng-change="pageChanged()"></ul>
+    </div>
+
+    <!--搜索为空显示推荐职位-->
+    <div ng-if="newjobs.length==0">
+        <div class="div404">
+            <div class="col-sm-5 img404"><img src="../image/404.png"></div>
+            <div class="col-sm-7 text404">
+                <div class="bold-text-404">暂时没有符合该搜索条件的内容</div>
+                <div class="text-404">请重新修改搜索条件后再次进行搜索</div>
+            </div>
+        </div>
+
+    </div>
+    <div ng-if="newjobs.length==0">
+        <label class="data-type">
+            推荐职位
+        </label>
+        <div class="u-recommend-jobs">
+            <div class="recommend-job-item col-lg-12 col-md-12 col-xs-12 " ng-repeat="newjob in jobs3">
+                <div class="job-left">
+                    <div class="job-name">
+                        <p>{{newjob.name}}</p>
+                        <div> {{newjob.updateAt |date:"yyyy-MM-dd hh:mm"}}</div>
+                    </div>
+                    <div class="job-salary">{{newjob.compensation |salaryFilter:newjob.compensation}}</div>
+                    <div class="job-more">{{newjob.province }}/{{newjob.education
+                        |salaryFilter:newjob.education}}/{{newjob.experience |experienceFilter:newjob.education}}
+                    </div>
+                </div>
+                <div class="company-right">
+                    <div class="company-name">{{newjob.companyName}}</div>
+                    <div class="company-industry"><span
+                            ng-repeat="industry in newjob.industryList">{{industry.industry}}</span>
+                    </div>
+                </div>
+                <div class="job-logo"><img src="{{newjob.logo}}"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</div>

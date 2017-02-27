@@ -1,0 +1,181 @@
+@media screen and (max-width: 993px) {
+  .g-bd .m-advantage .row .m-data {
+    border: none;
+  }
+  .g-bd .m-service .row .m-pic_box {
+    border: none;
+  }
+  .m-airplane {
+    display: none;
+  }
+}
+.g-bd {
+  width: 100%;
+}
+.g-bd .m-pic {
+  width: 100%;
+  height: 2.5rem;
+}
+.g-bd .m-advantage {
+  padding: .2rem 0;
+}
+.g-bd .m-advantage .m-data {
+  border-left: 1px solid #e5e9eb;
+}
+.g-bd .m-advantage .m-num {
+  font-size: .08rem;
+  color: #fc2b47;
+  font-weight: bold;
+  text-align: center;
+}
+.g-bd .m-advantage .m-detail {
+  margin-bottom: .08rem;
+  font-size: .1rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m-adv_item {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: .19rem;
+}
+.g-bd .m-adv_item .m-tt {
+  padding: .1rem 0 .05rem 0;
+  font-size: .08rem;
+  font-weight: bold;
+}
+.g-bd .m-adv_item .m-ct {
+  padding: .05rem 0 0 0;
+  font-size: .08rem;
+}
+.g-bd .m_newJob {
+  width: 100%;
+  padding: .4rem 0;
+  background: #f7f7f7;
+}
+.g-bd .m_newJob .m_tt {
+  font-size: .1rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m_newJob .m_ttE {
+  font-size: .08rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m_newJob .m_more {
+  padding-top: .2rem;
+  font-size: .1rem;
+  text-align: right;
+  margin-bottom: .2rem;
+}
+.g-bd .m_newJob .m-picBox {
+  height: 1.8rem;
+  width: 100%;
+}
+.g-bd .m_newJob .m-pic_single:hover {
+  box-shadow: 0 4px 7px #e7e7e7;
+  cursor: pointer;
+}
+.g-bd .m_newJob .m-pic_single {
+  height: 100%;
+  width: 22%;
+  margin: 0 .085rem;
+  background: #fff;
+}
+.g-bd .m_newJob .m-pic_single .u-logo {
+  height: 1rem;
+  line-height: 1rem;
+  padding-bottom: .02rem;
+  border-bottom: 1px solid #eeeeee;
+}
+.g-bd .m_newJob .m-pic_single .u-logo img {
+  vertical-align: middle;
+  max-height: 100%;
+}
+.g-bd .m_newJob .m-pic_single .u-jobName,
+.g-bd .m_newJob .m-pic_single .u-companyName {
+  text-align: center;
+  line-height: .22rem;
+}
+.g-bd .m_newJob .m-pic_single .u-jobName {
+  margin-top: .02rem;
+}
+.g-bd .m_newJob .carousel-control.left,
+.g-bd .m_newJob .carousel-control.right {
+  background-image: none !important;
+}
+.g-bd .m_newJob .carousel-control.left {
+  left: -10%;
+}
+.g-bd .m_newJob .carousel-control.right {
+  right: -10%;
+}
+.g-bd .m_newJob .carousel-indicators {
+  display: none;
+}
+.g-bd .m_newJob .carousel-control {
+  width: 10%;
+}
+.g-bd .m-service {
+  padding: .4rem 0 0.2rem 0;
+}
+.g-bd .m-service .m_tt {
+  font-size: .1rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m-service .m_ttE {
+  margin-bottom: .1rem;
+  font-size: .08rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m-service .m-pic_box {
+  border: 1px solid #e9edef;
+  border-radius: .05rem;
+  margin-bottom: .1rem;
+  padding: 0;
+  text-align: center;
+}
+.g-bd .m-service .m-pic_box img {
+  display: inline-block;
+}
+.g-bd .m-service .m-pic_box .m-service_txt {
+  font-size: .08rem;
+  height: .2rem;
+  line-height: .16rem;
+}
+.g-bd .m-service .m-airplane {
+  margin-top: .4rem;
+  position: relative;
+  height: 1px;
+  border-bottom: 2px dashed #ffd8d9;
+  box-sizing: border-box;
+}
+.g-bd .m-service .m-airplane img {
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  transform: translate(-50%, 0);
+}
+.g-bd .m-partner_word {
+  width: 100%;
+  padding: .4rem 0;
+  background: #f7f7f7;
+}
+.g-bd .m-partner_word .m_tt {
+  font-size: .1rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m-partner_word .m_ttE {
+  margin-bottom: .1rem;
+  font-size: .08rem;
+  color: #2d3e50;
+  text-align: center;
+}
+.g-bd .m-partner_word .m-pic_roll {
+  border: 1px solid red;
+  height: 100px;
+}
